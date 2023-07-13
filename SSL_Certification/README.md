@@ -1,3 +1,9 @@
+# How to download certificate file a given website
+- Open website in Chrome and click on top left lock sign
+- Connection is Secure > Certificate if Valid > Details > select top hierarchy > Export
+- and save inside folder 'certificate'
+![](images/download_certificate.png)
+
 # Best way 01: Using downloaded certificate in environment
 ```python
 import os
