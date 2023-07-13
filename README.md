@@ -1,3 +1,26 @@
+# SSL Certification Error
+```python
+import os
+import requests
+import pandas as pd
+import io
+
+# add the certificate
+certificate_path = "certificates/caadmin.netskope.com"
+os.environ["REQUESTS_CA_BUNDLE"] = certificate_path
+
+# get the data
+url = "https://raw.githubusercontent.com/unit8co/darts/master/datasets/AirPassengers.csv"
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.content
+    df = pd.read_csv(io.StringIO(data.decode('utf-8')))
+    print(df.head())
+else:
+    print("Failed to download the data. Status code:", response.status_code)
+```
+
 # Encoding error
 ```python
 Error:
