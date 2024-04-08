@@ -1,6 +1,14 @@
 # Good Resources
 - [pip install --trusted-host and requests examples](https://bobbyhadz.com/blog/python-connection-error-ssl-certificate-verify-failed)
 
+# Pip install error
+```bash
+# To set parameters to pip config
+pip config set global.trusted-host "pypi.python.org pypi.org files.pythonhosted.org" --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org
+
+# saves to:  C:\Users\a126291\AppData\Roaming\pip\pip.ini
+```
+
 # SSL Certification Error
 ```python
 import os
