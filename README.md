@@ -9,6 +9,22 @@ pip config set global.trusted-host "pypi.python.org pypi.org files.pythonhosted.
 # saves to:  C:\Users\a126291\AppData\Roaming\pip\pip.ini
 ```
 
+# Request verify=False monkey patch
+```python
+# we should always use verify=cafile (or verify=False) instead of using this monkey patch
+import requests.api
+import warnings
+
+
+def requestspatch(method, url, **kwargs):
+    kwargs['verify'] = False
+    return _origcall(method, url, **kwargs)
+
+_origcall = requests.api.request
+requests.api.request = requestspatch
+warnings.warn('Patched requests: SSL verification disabled!')
+```
+
 # SSL Certification Error
 ```python
 import os
