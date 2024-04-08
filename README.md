@@ -1,3 +1,6 @@
+# Good Resources
+- [pip install --trusted-host and requests examples](https://bobbyhadz.com/blog/python-connection-error-ssl-certificate-verify-failed)
+
 # SSL Certification Error
 ```python
 import os
