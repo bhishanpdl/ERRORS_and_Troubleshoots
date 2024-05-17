@@ -7,7 +7,7 @@ vector_store = DuckDBVectorStore(embed_dim=512, persist_dir="./persist/")
 ```
 
 **Full code**
-```
+```python
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.vector_stores.duckdb import DuckDBVectorStore
 from llama_index.core import StorageContext
