@@ -3,7 +3,9 @@
 
 ```python
 # code part that gives error
-vector_store = DuckDBVectorStore(embed_dim=512, persist_dir="./persist/")
+index = VectorStoreIndex.from_documents(
+    documents, storage_context=storage_context
+)
 ```
 
 **Full code**
