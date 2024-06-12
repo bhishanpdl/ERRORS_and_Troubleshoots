@@ -1,9 +1,9 @@
 # Introduction
-- https://github.com/mwilliamson/jq.py/issues/20
-- https://github.com/jqlang/jq  (Go to github releases and download the binary in place in windows path)
+- [github repo for jq binary releases](https://github.com/jqlang/jq)
+- [python module jq](https://pypi.org/project/jq/)
+- [github repo for binary jq issues](https://github.com/mwilliamson/jq.py/issues/20)
 - https://stackoverflow.com/questions/32911446/error-installing-jq-on-windows?rq=3
 
-  
 # Install python module jq on windows
 1. Install `jq` binary from github releases and put in windows path. (check: `jq --version`)
 2. Download the correct python version python pip wheel for windows from [https://jeffreyknockel.com/jq/](https://jeffreyknockel.com/jq/)
