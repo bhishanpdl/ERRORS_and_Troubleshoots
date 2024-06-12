@@ -15,3 +15,14 @@ cd ~/Softwares/jq
 ls # jq-1.6.0-cp312-cp312-win_amd64.whl
 pip install jq-1.6.0-cp312-cp312-win_amd64.whl
 ```
+
+# Testing
+```python
+import jq
+
+assert jq.compile(".").input_value(None).first() == None
+assert jq.compile(".").input_value(42).first() == 42
+assert jq.compile(".").input_value(0.42).first() == 0.42
+assert jq.compile(".").input_value(True).first() == True
+assert jq.compile(".").input_value("hello").first() == "hello"
+```
