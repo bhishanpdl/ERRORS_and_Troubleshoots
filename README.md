@@ -25,6 +25,16 @@ requests.api.request = requestspatch
 warnings.warn('Patched requests: SSL verification disabled!')
 ```
 
+# Requests disable SSL monkey patch
+```python
+import requests
+
+session = requests.Session()
+session.verify = False
+
+requests.sessions.Session = lambda: session
+```
+
 # SSL Certification Error
 ```python
 import os
